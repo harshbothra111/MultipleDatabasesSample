@@ -1,6 +1,6 @@
 # MultipleDatabasesSample
 
-# Create Database
+## Create Database
 -- Create CustomerDatabase
 CREATE DATABASE CustomerDatabase;
 GO
@@ -106,7 +106,7 @@ CREATE TABLE Payments (
 );
 GO
 
-# Insert Data
+## Insert Data
 -- Use CustomerDatabase
 USE CustomerDatabase;
 GO
@@ -176,7 +176,7 @@ VALUES
 (2, '2024-09-06', 820.00, 'PayPal');
 GO
 
-# Generate Contexts
+## Generate Contexts
 Scaffold-DbContext Name=ConnectionStrings:CustomerDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\CustomerDatabase -Context CustomerDbContext -ContextDir "Contexts"
 
 Scaffold-DbContext Name=ConnectionStrings:OrdersDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\OrdersDatabase -Context OrderDbContext -ContextDir "Contexts"
