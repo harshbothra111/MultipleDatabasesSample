@@ -178,5 +178,7 @@ GO
 
 # Generate Contexts
 Scaffold-DbContext Name=ConnectionStrings:CustomerDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\CustomerDatabase -Context CustomerDbContext -ContextDir "Contexts"
+
 Scaffold-DbContext Name=ConnectionStrings:OrdersDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\OrdersDatabase -Context OrderDbContext -ContextDir "Contexts"
+
 Scaffold-DbContext Name=ConnectionStrings:ProductsDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\ProductsDatabase -Context ProductDbContext -ContextDir "Contexts"
