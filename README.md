@@ -1,6 +1,14 @@
 # MultipleDatabasesSample
 
-## Create Database
+## Objective
+This is a .NET 8 Web API project with Entity Framework - Code First Approach  demonstrates access of Multiple Databases having different different DbContext and Repositories wrapped into Unit of Work pattern using Clean Architecture.
+
+## Usage
+
+### ConnectionStrings
+Replace ConnectionStrings in API/appSettings.Development.json
+
+### Create Database
 -- Create CustomerDatabase
 CREATE DATABASE CustomerDatabase;
 GO
@@ -106,7 +114,7 @@ CREATE TABLE Payments (
 );
 GO
 
-## Insert Data
+### Insert Data
 -- Use CustomerDatabase
 USE CustomerDatabase;
 GO
@@ -176,9 +184,9 @@ VALUES
 (2, '2024-09-06', 820.00, 'PayPal');
 GO
 
-## Generate Contexts
-Scaffold-DbContext Name=ConnectionStrings:CustomerDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\CustomerDatabase -Context CustomerDbContext -ContextDir "Contexts"
+### Generate Contexts
+Scaffold-DbContext Name=ConnectionStrings:CustomerDatabase Microsoft.EntityFrameworkCore.SqlServer -o Databases\CustomerDatabase\Models -Context CustomerDbContext -ContextDir "Databases\CustomerDatabase"
 
-Scaffold-DbContext Name=ConnectionStrings:OrdersDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\OrdersDatabase -Context OrderDbContext -ContextDir "Contexts"
+Scaffold-DbContext Name=ConnectionStrings:OrdersDatabase Microsoft.EntityFrameworkCore.SqlServer -o Databases\OrdersDatabase\Models -Context OrderDbContext -ContextDir "Databases\OrdersDatabase"
 
-Scaffold-DbContext Name=ConnectionStrings:ProductsDatabase Microsoft.EntityFrameworkCore.SqlServer -o Models\ProductsDatabase -Context ProductDbContext -ContextDir "Contexts"
+Scaffold-DbContext Name=ConnectionStrings:ProductsDatabase Microsoft.EntityFrameworkCore.SqlServer -o Databases\ProductsDatabase\Models -Context ProductDbContext -ContextDir "Databases\ProductsDatabase"
