@@ -1,9 +1,6 @@
 ﻿using Infrastructure.Databases.CustomerDatabase;
-using Infrastructure.Databases.CustomerDatabase.Interfaces;
 using Infrastructure.Databases.OrdersDatabase;
-using Infrastructure.Databases.OrdersDatabase.Interfaces;
 using Infrastructure.Databases.ProductsDatabase;
-using Infrastructure.Databases.ProductsDatabase.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

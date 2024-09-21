@@ -1,15 +1,14 @@
-﻿using Infrastructure.Databases.CustomerDatabase.Interfaces;
-using Infrastructure.Databases.CustomerDatabase.Repositories;
+﻿using Infrastructure.Databases.CustomerDatabase.Repositories;
 using Infrastructure.Persistence;
 
 namespace Infrastructure.Databases.CustomerDatabase
 {
     public class CustomerUnitOfWork(CustomerDbContext context) : UnitOfWork(context)
     {
-        private ICustomerRepository? _customerRepository;
-        private IAddressRepository? _addressRepository;
+        private CustomerRepository? _customerRepository;
+        private AddressRepository? _addressRepository;
 
-        public ICustomerRepository CustomerRepository
+        public CustomerRepository CustomerRepository
         {
             get
             {
@@ -18,7 +17,7 @@ namespace Infrastructure.Databases.CustomerDatabase
             }
         }
 
-        public IAddressRepository AddressRepository
+        public AddressRepository AddressRepository
         {
             get
             {

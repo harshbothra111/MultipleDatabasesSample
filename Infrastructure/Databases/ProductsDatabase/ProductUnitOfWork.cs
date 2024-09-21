@@ -1,15 +1,14 @@
-﻿using Infrastructure.Databases.ProductsDatabase.Interfaces;
-using Infrastructure.Databases.ProductsDatabase.Repositories;
+﻿using Infrastructure.Databases.ProductsDatabase.Repositories;
 using Infrastructure.Persistence;
 
 namespace Infrastructure.Databases.ProductsDatabase
 {
     public class ProductUnitOfWork(ProductDbContext context) : UnitOfWork(context)
     {
-        private IProductRepository? _productRepository;
-        private ICategoryRepository? _categoryRepository;
+        private ProductRepository? _productRepository;
+        private CategoryRepository? _categoryRepository;
 
-        public IProductRepository ProductRepository
+        public ProductRepository ProductRepository
         {
             get
             {
@@ -18,7 +17,7 @@ namespace Infrastructure.Databases.ProductsDatabase
             }
         }
 
-        public ICategoryRepository CategoryRepository
+        public CategoryRepository CategoryRepository
         {
             get
             {

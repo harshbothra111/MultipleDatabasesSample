@@ -1,16 +1,15 @@
-﻿using Infrastructure.Databases.OrdersDatabase.Interfaces;
-using Infrastructure.Databases.OrdersDatabase.Repositories;
+﻿using Infrastructure.Databases.OrdersDatabase.Repositories;
 using Infrastructure.Persistence;
 
 namespace Infrastructure.Databases.OrdersDatabase
 {
     public class OrderUnitOfWork(OrderDbContext context) : UnitOfWork(context)
     {
-        private IOrderDetailRepository? _orderDetailRepository;
+        private OrderDetailRepository? _orderDetailRepository;
         private OrderRepository? _orderRepository;
-        private IPaymentRepository? _paymentRepository;
+        private PaymentRepository? _paymentRepository;
 
-        public IOrderDetailRepository OrderDetailRepository
+        public OrderDetailRepository OrderDetailRepository
         {
             get
             {
@@ -28,7 +27,7 @@ namespace Infrastructure.Databases.OrdersDatabase
             }
         }
 
-        public IPaymentRepository PaymentRepository
+        public PaymentRepository PaymentRepository
         {
             get
             {
