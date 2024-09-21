@@ -1,7 +1,7 @@
-﻿using Infrastructure.Models.ProductsDatabase;
+﻿using Infrastructure.Databases.ProductsDatabase.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Contexts;
+namespace Infrastructure.Databases.ProductsDatabase;
 
 public partial class ProductDbContext : DbContext
 {

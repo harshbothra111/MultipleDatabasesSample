@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Infrastructure.Models.CustomerDatabase;
+namespace Infrastructure.Databases.CustomerDatabase.Models;
 
 public partial class Customer
 {

@@ -1,7 +1,7 @@
-﻿using Infrastructure.Models.CustomerDatabase;
+﻿using Infrastructure.Databases.CustomerDatabase.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Contexts;
+namespace Infrastructure.Databases.CustomerDatabase;
 
 public partial class CustomerDbContext : DbContext
 {

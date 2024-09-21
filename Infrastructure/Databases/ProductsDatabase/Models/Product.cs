@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Infrastructure.Models.ProductsDatabase;
+﻿namespace Infrastructure.Databases.ProductsDatabase.Models;
 
 public partial class Product
 {

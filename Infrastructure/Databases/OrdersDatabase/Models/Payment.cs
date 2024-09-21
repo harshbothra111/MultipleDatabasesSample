@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Infrastructure.Models.OrdersDatabase;
+namespace Infrastructure.Databases.OrdersDatabase.Models;
 
 public partial class Payment
 {

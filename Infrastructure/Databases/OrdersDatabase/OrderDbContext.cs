@@ -1,7 +1,7 @@
-﻿using Infrastructure.Models.OrdersDatabase;
+﻿using Infrastructure.Databases.OrdersDatabase.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Contexts;
+namespace Infrastructure.Databases.OrdersDatabase;
 
 public partial class OrderDbContext : DbContext
 {
